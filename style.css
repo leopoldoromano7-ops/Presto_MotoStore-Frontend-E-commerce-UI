@@ -109,7 +109,7 @@ z-index: 1000;
 }
 
 .navbar-custom img:hover {
-    transform: scale(1.0.5);
+    transform: scale(1.05);
     box-shadow: 0 0 15px var(--blue-pastel), 0 0 30px var(--blue-pastel);
 }
 
@@ -131,7 +131,7 @@ z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 05);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -204,7 +204,7 @@ z-index: 1000;
 /* HEADER */
 
 .lead   {
-    font-weight: 600
+    font-weight: 600;
 }
 
 /* search Opern Source header*/
@@ -223,7 +223,7 @@ z-index: 1000;
     font-size: 14px;
     font-weight: 500;
     background-color: rgba(150, 200, 230, 0.5);; 
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
     border: 2px solid transparent;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
