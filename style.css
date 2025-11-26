@@ -1,0 +1,73 @@
+/* Impostazione di lavoro */
+
+/* FONT */
+* {
+      font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5,.h1, .h2, .h3, .h4 {
+    font-family: "Quicksand", sans-serif;  
+}
+
+/* COLORI */
+
+:root{
+    --red-primary: rgb(234, 36, 51);
+    --yellow-primary: rgb(246, 186, 66);
+    --dark: rgb(103, 93, 102);
+    --light: rgb(234, 238, 237);
+    --blue-pastel: rgb(150, 200, 230);
+}
+
+body{
+margin: 0;
+background-color: var(--light);
+color: var(--dark);
+}
+
+.header {
+background: var(--red-primary);
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+.text-blue  {
+    color: var(--blue-pastel);
+}
+
+.text-red  {
+    color: var(--red-primary);
+}
+
+.text-yellow  {
+    color: var(--yellow-primary);
+}
+
+.text-dark  {
+    color: var(--dark);
+}
+
+.text-light {
+    color: var(--light);
+}
+
+.bg-dark {
+    background-color: var(--dark);
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.bg-red {
+    background-color: var(--red-primary);
+}
+
+.bg-yellow {
+    background-color: var(--yellow-primary);
+}
+
+.bg-blue {
+    background-color: var(--blue-pastel);
+}
