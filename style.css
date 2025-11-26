@@ -25,6 +25,10 @@ background-color: var(--blue-pastel);
 color: var(--dark);
 }
 
+/* header{
+    mar
+} */
+
 .header {
 background: var(--red-primary);
 color: white;
@@ -127,7 +131,7 @@ z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 05);
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -141,7 +145,6 @@ z-index: 1000;
   border: none;
   outline: none;
   font-size: 0.9em;
-  caret-color: rgb(255, 81, 0);
 }
 
 .labelforsearch {
@@ -185,6 +188,19 @@ z-index: 1000;
   transition-duration: 0.3s;
 }
 
+/* NAVBAR trasparenza */
+.navbar-transparent {
+    background: linear-gradient(to right, rgba(246, 186, 66, 0.7), rgba(234, 36, 51, 0.7));
+    backdrop-filter: blur(8px);
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar-solid {
+    background: linear-gradient(to right, var(--yellow-primary), var(--red-primary));
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+
 /* HEADER */
 
 .lead   {
@@ -195,20 +211,19 @@ z-index: 1000;
 .container2 {
     display: flex;        
     justify-content: center; 
-    gap: 0;              /* input e bottone attaccati senza gap */
+    gap: 0;              
     margin-top: 15px;
-    align-items: stretch; /* fa sì che input e bottone abbiano la stessa altezza */
-    max-width: 250px;     /* facoltativo, per non occupare tutta la larghezza */
+    align-items: stretch; 
+    max-width: 250px;    
 }
 
 .input2 {
-    flex: 1;               /* occupa tutto lo spazio disponibile */
+    flex: 1;               
     padding: 10px;
     font-size: 14px;
     font-weight: 500;
-    background-color: #53535f;
-    color: #fff;
-    caret-color: #f7f7f8;
+    background-color: rgba(150, 200, 230, 0.5);; 
+    color: rgb(255, 255, 255)
     border: 2px solid transparent;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
@@ -220,20 +235,15 @@ z-index: 1000;
     border: 2px solid rgba(255, 255, 255, 0.16);
 }
 
-.input2:focus {
-    border: 2px solid #a970ff;
-    background-color: #0e0e10;
-}
-
 .search__btn2 {
-    width: 40px;                /* larghezza fissa bottone */
-    background-color: rgba(42, 42, 45, 1);
+    width: 40px;             
+    background-color: rgba(42, 42, 45, 0.5);
     border: none;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     display: flex;
     justify-content: center;
-    align-items: center;        /* centra perfettamente la lente */
+    align-items: center;     
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
@@ -243,5 +253,6 @@ z-index: 1000;
 }
 
 .search__btn2 svg {
-    display: block;   /* evita eventuali offset verticali */
+    display: block;  
 }
+
