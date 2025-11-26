@@ -71,3 +71,39 @@ text-align: center;
 .bg-blue {
     background-color: var(--blue-pastel);
 }
+
+/* NAVBAR CUSTOM */
+.navbar-custom {
+position: fixed;
+top: 20px;
+left: 50%;
+transform: translateX(-50%);
+width: 90%;
+max-width: 1200px;
+background-color: var(--yellow-primary);
+border-radius: 20px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+padding: 10px 20px;
+z-index: 1000;
+}
+
+.navbar-custom .nav-link {
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link.hover-underline:hover {
+    color: var(--blue-pastel);
+    text-decoration: underline var(--blue-pastel);
+}
+
+.navbar-custom img {
+height: 120px;
+transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-custom img:hover {
+    transform: scale(1.0.5);
+    box-shadow: 0 0 15px var(--blue-pastel), 0 0 30px var(--blue-pastel);
+}

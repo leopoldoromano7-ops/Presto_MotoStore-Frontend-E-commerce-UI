@@ -16,40 +16,39 @@
 </head>
   <body>
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Modelli
+        <nav class="navbar navbar-custom navbar-expand-lg bg-yellow fixed-top rounded-3 shadow-sm px-4">
+            <div class="container-fluid">
+
+                <a class="navbar-brand " href="#">
+                <img  class="rounded"  src="media/logo.png" alt="Logo" height="80">
                 </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Modello1</a></li>
-                    <li><a class="dropdown-item" href="#">Modello2</a></li>
-                    <li><a class="dropdown-item" href="#">Modello3</a></li>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+                    <li class="nav-item"><a class="nav-link px-3    mx-3 hover-underline" href="#">Home</a></li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle px-3  hover-underline    mx-3" href="#" role="button" data-bs-toggle="dropdown">Modelli</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Modello1</a></li>
+                        <li><a class="dropdown-item" href="#">Modello2</a></li>
+                        <li><a class="dropdown-item" href="#">Modello3</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-3  hover-underline  mx-3" href="#">Concessionari</a></li>
+                    <li class="nav-item"><a class="nav-link px-3  hover-underline   mx-3" href="#">NEWS</a></li>
                 </ul>
-                </li>
-                 <li class="nav-item">
-                <a class="nav-link" href="#">Concessionari</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link " href="#">NEWS</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
+                </div>
+
+                <form class="d-flex align-items-center ms-auto" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn-outline-success" type="submit">Cerca</button>
-            </form>
+                <button class="btn btn-outline-success px-3" type="submit">Cerca</button>
+                </form>
+
             </div>
-        </div>
         </nav>
 
     <header>
