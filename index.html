@@ -14,46 +14,96 @@
     <!-- link CSS personale -->
      <link rel="stylesheet" href="style.css">
 </head>
-  <body>
 
-        <nav class="navbar navbar-custom navbar-expand-lg bg-yellow fixed-top rounded-3 shadow-sm px-4">
-            <div class="container-fluid">
+  <body>    
+    <div class="navbar-background">
+            <nav class="navbar navbar-custom navbar-expand-lg fixed-top rounded-3 shadow-sm px-4">
+                <div class="container-fluid">
 
-                <a class="navbar-brand " href="#">
-                <img  class="rounded"  src="media/logo.png" alt="Logo" height="80">
-                </a>
+                    <a class="navbar-brand " href="#">
+                    <img  class="rounded"  src="media/logo.png" alt="Logo" height="80">
+                    </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
-                <ul class="navbar-nav mb-2 mb-lg-0 text-center">
-                    <li class="nav-item"><a class="nav-link px-3    mx-3 hover-underline" href="#">Home</a></li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle px-3  hover-underline    mx-3" href="#" role="button" data-bs-toggle="dropdown">Modelli</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Modello1</a></li>
-                        <li><a class="dropdown-item" href="#">Modello2</a></li>
-                        <li><a class="dropdown-item" href="#">Modello3</a></li>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+                        <li class="nav-item"><a class="nav-link px-3    mx-3 hover-underline" href="#">Home</a></li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3  hover-underline    mx-3" href="#" role="button" data-bs-toggle="dropdown">Modelli</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Modello1</a></li>
+                            <li><a class="dropdown-item" href="#">Modello2</a></li>
+                            <li><a class="dropdown-item" href="#">Modello3</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-3  hover-underline  mx-3" href="#">Concessionari</a></li>
+                        <li class="nav-item"><a class="nav-link px-3  hover-underline   mx-3" href="#">NEWS</a></li>
                     </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link px-3  hover-underline  mx-3" href="#">Concessionari</a></li>
-                    <li class="nav-item"><a class="nav-link px-3  hover-underline   mx-3" href="#">NEWS</a></li>
-                </ul>
+                    </div>
+
+                <div class="navbar-icons d-flex align-items-center ms-3">
+                    <a href="#" class="nav-icon me-3">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="#" class="nav-icon">
+                        <i class="fas fa-shopping-cart me-3"></i>
+                    </a>
                 </div>
 
-                <form class="d-flex align-items-center ms-auto" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn-outline-success px-3" type="submit">Cerca</button>
-                </form>
+                        <div class="InputContainer">
+                            <input
+                                placeholder="Search"
+                                id="input"
+                                class="input"
+                                name="text"
+                                type="text"
+                            />
 
-            </div>
-        </nav>
+                            <label class="labelforsearch" for="input">
+                                <svg class="searchIcon" viewBox="0 0 512 512">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                                ></path>
+                                </svg>
+                            </label>
+                        </div>
+
+
+                </div>
+            </nav>
+    </div>
+
 
     <header>
 
+                <section class="videoSection     position-relative">
+                    
+                    <div class="row">
+                    <video  autoplay muted loop data-bs-video>
+                        <source src="/media/video.mp4" type="video/mp4">
+                        <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                    </video>
+                        </div>
+                    </div>
+                    </div>
+                </section>
         
+
+                    <div class="overlay position-absolute top-50 start-50 translate-middle text-center text-white">
+                        <img src="/media/logo.png" alt="Logo del sito" class="img-fluid mb-3" style="max-width: 200px;">
+                        <p class="lead text-light">RIDE OR SIMPLE WALK...</p>
+                    <div class="container2  d-flex justify-content-center">
+                        <input type="text" name="text" class="input2" placeholder="Search">
+                            <button class="search__btn2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
+                                <path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z" fill="#efeff1"></path>
+                                </svg>
+                            </button>
+                    </div>
+
     </header>
 
 

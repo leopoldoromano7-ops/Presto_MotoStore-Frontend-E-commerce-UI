@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5,.h1, .h2, .h3, .h4 {
 
 body{
 margin: 0;
-background-color: var(--light);
+background-color: var(--blue-pastel);
 color: var(--dark);
 }
 
@@ -79,8 +79,9 @@ top: 20px;
 left: 50%;
 transform: translateX(-50%);
 width: 90%;
+height: 120px;
 max-width: 1200px;
-background-color: var(--yellow-primary);
+background: linear-gradient(to right, var(--yellow-primary), var(--red-primary));
 border-radius: 20px;
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 padding: 10px 20px;
@@ -99,11 +100,148 @@ z-index: 1000;
 }
 
 .navbar-custom img {
-height: 120px;
-transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    height: 110px;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar-custom img:hover {
     transform: scale(1.0.5);
     box-shadow: 0 0 15px var(--blue-pastel), 0 0 30px var(--blue-pastel);
+}
+
+/* ICONE */
+.navbar-icons .nav-icon {
+    color: var(--dark);
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-icons .nav-icon:hover {
+    color: var(--blue-pastel);
+    transform: scale(1.2);
+}
+
+/* search Opern Source */
+.InputContainer {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  padding-left: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.input {
+  width: 170px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  caret-color: rgb(255, 81, 0);
+}
+
+.labelforsearch {
+  cursor: text;
+  padding: 0px 12px;
+}
+
+.searchIcon {
+  width: 13px;
+}
+
+.border {
+  height: 40%;
+  width: 1.3px;
+  background-color: rgb(223, 223, 223);
+}
+
+.micIcon {
+  width: 12px;
+}
+
+.micButton {
+  padding: 0px 15px 0px 12px;
+  border: none;
+  background-color: transparent;
+  height: 40px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.searchIcon path {
+  fill: rgb(114, 114, 114);
+}
+
+.micIcon path {
+  fill: rgb(255, 81, 0);
+}
+
+.micButton:hover {
+  background-color: rgb(255, 230, 230);
+  transition-duration: 0.3s;
+}
+
+/* HEADER */
+
+.lead   {
+    font-weight: 600
+}
+
+/* search Opern Source header*/
+.container2 {
+    display: flex;        
+    justify-content: center; 
+    gap: 0;              /* input e bottone attaccati senza gap */
+    margin-top: 15px;
+    align-items: stretch; /* fa sì che input e bottone abbiano la stessa altezza */
+    max-width: 250px;     /* facoltativo, per non occupare tutta la larghezza */
+}
+
+.input2 {
+    flex: 1;               /* occupa tutto lo spazio disponibile */
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #53535f;
+    color: #fff;
+    caret-color: #f7f7f8;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input2:hover {
+    border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.input2:focus {
+    border: 2px solid #a970ff;
+    background-color: #0e0e10;
+}
+
+.search__btn2 {
+    width: 40px;                /* larghezza fissa bottone */
+    background-color: rgba(42, 42, 45, 1);
+    border: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;        /* centra perfettamente la lente */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search__btn2:hover {
+    background-color: rgba(54, 54, 56, 1);
+}
+
+.search__btn2 svg {
+    display: block;   /* evita eventuali offset verticali */
 }
