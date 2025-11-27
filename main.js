@@ -14,3 +14,157 @@ function updateNavbar() {
 
 updateNavbar();
 window.addEventListener('scroll', updateNavbar);
+
+
+
+
+// CARD MOTO
+let motoData = [
+    {nome: "America Twin", tipo: "Adventure", img: "/media/Moto/moto1.png", link:"#"},
+    {nome: "Prince 390", tipo: "Street", img: "/media/Moto/moto2.png" , link:"#"},
+    {nome: "CNX 390", tipo: "Sport", img: "/media/Moto/moto3.png" , link:"#"}
+];
+
+
+
+let container = document.getElementById('motoCardsContainer');
+
+motoData.forEach(moto => {
+    let col = document.createElement('div');
+    col.className = 'col-12 col-sm-6 col-md-4 d-flex';
+    
+    col.innerHTML = `
+        <div class="card-moto">
+            <img src="${moto.img}" alt="${moto.nome}">
+            <div class="card-body">
+                <h5 class="card-title">${moto.nome}</h5>
+                <p class="card-subtitle">${moto.tipo}</p>
+                <a href="${moto.link}" class="btn">Pagina del Prodotto</a>
+            </div>
+        </div>
+    `;
+    container.appendChild(col);
+});
+
+// card CAROUSEL
+document.addEventListener("DOMContentLoaded", () => {
+
+    // counter
+     function createInterval(number, element, timing) {
+    let counter = 0;
+    let interval = setInterval(() => {
+      if (counter < number) {
+        counter++;
+        element.textContent = counter;
+      } else {
+        clearInterval(interval);
+      }
+    }, timing);
+  }
+
+  let primoNumero = document.getElementById("primoNumero");
+  let secondoNumero = document.getElementById("secondoNumero");
+  let terzoNumero = document.getElementById("terzoNumero");
+
+  let confirm = false;
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && confirm === false) {
+        createInterval(1000, primoNumero, 10);
+        createInterval(2000, secondoNumero, 5);
+        createInterval(100, terzoNumero, 100);
+        confirm = true;
+      }
+    });
+  });
+
+    observer.observe(document.querySelector(".incrementNumber"));
+
+
+  let motosCarousel = [
+    { id: "carouselMoto1", immagini: ["/media/Carousel/adv/adv1.png","/media/Carousel/adv/adv2.png","/media/Carousel/adv/adv3.jpg"], nome: "Advetnure", sottotitolo: "#adv", link: "/pagina-prodotto1.html" },
+    { id: "carouselMoto2", immagini: ["/media/Carousel/adv/naked/nk1.jpg","/media/Carousel/adv/naked/nk2.jpg","/media/Carousel/adv/naked/nk3.jpg"], nome: "Naked", sottotitolo: "#Street", link: "/pagina-prodotto2.html" },
+    { id: "carouselMoto3", immagini: ["/media/Carousel/adv/sport/sport1.jpg","/media/Carousel/adv/sport/sport2.jpg","/media/Carousel/adv/sport/sport3.jpg"], nome: "Sport", sottotitolo: "#Racing", link: "/pagina-prodotto3.html" },
+    { id: "carouselMoto4", immagini: ["/media/Carousel/adv/tourer/tour1.jpg",   "/media/Carousel/adv/tourer/tour3.jpg", "/media/Carousel/adv/tourer/tour2.jpg"], nome: "Touring", sottotitolo: "#Explore", link: "/pagina-prodotto4.html" }
+  ];
+
+  let containerCarousel = document.getElementById("motoCardsContainerCarousel");
+
+  motosCarousel.forEach(function(moto) {
+    // items del carousel
+    let carouselItems = ""; 
+        for (let i = 0; i < moto.immagini.length; i++) {
+            let activeClass = "";
+            if (i === 0) {
+                activeClass = "active";
+            } else {
+                activeClass = "";
+            }
+
+            let divStart = '<div class="carousel-item ' + activeClass + '">';
+            let imgTag = '<img src="' + moto.immagini[i] + '" class="d-block w-100" alt="' + moto.nome + '">';
+            let divEnd = '</div>';
+
+            let itemHTML = divStart + imgTag + divEnd;
+            carouselItems += itemHTML;
+        }
+
+    //card del carousel
+    let cardCarousel = document.createElement("div");
+    cardCarousel.className = "col-12 col-md-3 px-3 mb-4";
+    cardCarousel.innerHTML = `
+      <div class="card-carousel">
+        <div id="${moto.id}" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            ${carouselItems}
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-red">${moto.nome}</h5>
+          <p class="card-subtitle">${moto.sottotitolo}</p>
+          <a href="${moto.link}" class="btn btn-custom">Scopri</a>
+        </div>
+      </div>
+    `;
+
+    containerCarousel.appendChild(cardCarousel);
+  });
+
+  // avviares  i carousel
+  motosCarousel.forEach(moto => {
+    let myCarousel = document.getElementById(moto.id);
+    new bootstrap.Carousel(myCarousel, {
+      interval: 2000, 
+      ride: 'carousel'
+    });
+  });
+
+let newsCard = [
+    {titolo: "Nuovo modello Adventure", testo: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vero incidunt eos, doloribus rerum sunt molestiae tempore laudantium dicta nisi accusamus saepe asperiores omnis dolorum corrupti dolorem quo porro voluptatem placeat animi recusandae aperiam magni sit deleniti. Itaque vitae, enim doloribus sunt tenetur aliquid aspernatur molestias eos aperiam exercitationem porro?" ,img: "/media/news/news.jpg", link: "https://esempio.com/news1"},
+    {titolo: "Evento Street Riding", testo: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vero incidunt eos, doloribus rerum sunt molestiae tempore laudantium dicta nisi accusamus saepe asperiores omnis dolorum corrupti dolorem quo porro voluptatem placeat animi recusandae aperiam magni sit deleniti. Itaque vitae, enim doloribus sunt tenetur aliquid aspernatur molestias eos aperiam exercitationem porro?" ,    img: "/media/news/news2.jpg", link: "https://esempio.com/news2"},
+    {titolo: "Touring Experience", testo: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vero incidunt eos, doloribus rerum sunt molestiae tempore laudantium dicta nisi accusamus saepe asperiores omnis dolorum corrupti dolorem quo porro voluptatem placeat animi recusandae aperiam magni sit deleniti. Itaque vitae, enim doloribus sunt tenetur aliquid aspernatur molestias eos aperiam exercitationem porro?"    ,   img: "/media/news/news3.jpg", link: "https://esempio.com/news3"}
+];
+
+let containerNews = document.getElementById('newsCardsContainer');
+
+newsCard.forEach(news => {
+    let col = document.createElement('div');
+    col.className = 'col-12 col-sm-6 col-md-4 d-flex';
+
+    col.innerHTML = `
+            <div class="news-card">
+
+                <img src="${news.img}" alt="${news.titolo}" class="news-card-img">
+
+                <div class="news-card-body scroll-body">
+                    <h5 class="news-card-title">${news.titolo}</h5>
+                <p class="news-card-text">${news.testo}</p>
+                </div>
+            `;
+
+    containerNews.appendChild(col);
+});
+
+});
+
+

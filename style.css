@@ -17,11 +17,20 @@ h1, h2, h3, h4, h5,.h1, .h2, .h3, .h4 {
     --dark: rgb(103, 93, 102);
     --light: rgb(234, 238, 237);
     --blue-pastel: rgb(150, 200, 230);
+    --bone-white:   rgb(249, 246, 238);
+}
+/* uso questa proprieta' per intervenire sulla funzione di scroll */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body{
 margin: 0;
-background-color: var(--blue-pastel);
+/* uso questa proprieta' per intervenire sulla funzione di scroll */
+overflow-x: hidden; 
+background-color: var(--light);
 color: var(--dark);
 }
 
@@ -31,7 +40,7 @@ color: var(--dark);
 
 .header {
 background: var(--red-primary);
-color: white;
+color: var(--light);
 padding: 20px;
 text-align: center;
 }
@@ -74,6 +83,14 @@ text-align: center;
 
 .bg-blue {
     background-color: var(--blue-pastel);
+}
+
+.bg-bone{
+    background-color: var(--bone-white);
+}
+
+.bone-shadow{
+    text-shadow: 2px 2px 4px var(--bone-white);
 }
 
 /* NAVBAR CUSTOM */
@@ -202,11 +219,6 @@ z-index: 1000;
 
 
 /* HEADER */
-
-.lead   {
-    font-weight: 600;
-}
-
 /* search Opern Source header*/
 .container2 {
     display: flex;        
@@ -256,3 +268,403 @@ z-index: 1000;
     display: block;  
 }
 
+.overlay-logo {
+    max-width: 300px;
+    filter: drop-shadow(2px 2px 5px var(--blue-pastel));
+}
+
+.overlay-lead {
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px var(--blue-pastel);
+}
+/* Main */
+/* PRIMO ARTICOLO / NUOVA MOTO */
+
+.border-color {
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, var(--yellow-primary), var(--red-primary)) 1;
+}
+
+.img-africaTwin {
+    width: 580px;
+    height: 360px;
+    object-fit: cover; 
+}
+
+.yellow-shadow{
+    text-shadow: 2px 2px 4px var(--yellow-primary);
+}
+
+
+.btn-custom{
+    background: linear-gradient(135deg, var(--red-primary), var(--yellow-primary));
+    color: var(--light);
+    font-weight: 700;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(135deg, var(--yellow-primary), var(--red-primary));
+    color: var(--blue-pastel);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.btn-custom:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* SECONDO ARTICOLO, NUOVE USCITE */
+.redShadow{
+       text-shadow: 2px 2px 4px var(--red-primary);
+}
+
+
+/* SEZIONE DEDICATA ALLE CARD, e' venuta piu lunga e complessa del repvisto */
+.card-moto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; 
+    height: 100%;
+    max-width: 300px; 
+    margin: 15px auto;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    height: 350px; 
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-moto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.card-moto img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover; 
+}
+
+.card-moto .card-body {
+    padding: 15px;
+}
+
+.card-moto .card-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--red-primary);
+    text-shadow: 2px 2px 4px var(--yellow-primary);
+}
+
+.card-moto .card-subtitle {
+    font-size: 0.95rem;
+    color: var(--yellow-primary);
+    text-shadow: 2px 2px 4px var(--red-primary);
+    margin-bottom: 10px;
+}
+
+.card-moto .btn {
+    background: linear-gradient(135deg, var(--red-primary), var(--yellow-primary));
+    color: var(--light);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.card-moto .btn:hover {
+    background: linear-gradient(135deg, var(--yellow-primary), var(--red-primary));
+    color: var(--blue-pastel);
+}
+
+/* sezione carousel */
+/* CARD CAROUSEL */
+.card-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+    text-align: center;
+    height: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-carousel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.card-carousel .carousel-inner img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-carousel .card-body {
+    padding: 15px;
+}
+
+.card-carousel .card-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--red-primary);
+    text-shadow: 2px 2px 4px var(--yellow-primary);
+}
+
+.card-carousel .card-subtitle {
+    font-size: 0.95rem;
+    color: var(--yellow-primary);
+    text-shadow: 2px 2px 4px var(--red-primary);
+    margin-bottom: 10px;
+}
+
+.card-carousel .btn {
+    background: linear-gradient(135deg, var(--red-primary), var(--yellow-primary));
+    color: var(--light);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.card-carousel .btn:hover {
+    background: linear-gradient(135deg, var(--yellow-primary), var(--red-primary));
+    color: var(--blue-pastel);
+}
+
+
+/* <!-- footer provvisorio, copiato ed incollato di pacca da una pagina        open source da modificare! --> */
+/*  Section     Newsletter*/
+/* Newsletter Section */
+.newsletter-section {
+  background-image: url('/media/newsletter.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: ;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.newsletter-overlay {
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.newsletter-overlay h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--yellow-primary);
+}
+
+.newsletter-overlay p {
+  margin-bottom: 1rem;
+  color: var(--bone-white);
+}
+
+.newsletter-overlay form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.newsletter-overlay input.form-control {
+  border-radius: 6px;
+  border: 2px solid var(--blue-pastel);
+}
+
+.newsletter-overlay button.btn-primary {
+  background-color: var(--red-primary);
+  border: none;
+  font-weight: 700;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.newsletter-overlay button.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  background-color: var(--red-primary);
+}
+
+.newsletter-overlay small {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--light);
+}
+
+/* stili per news card */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    height: 380px;
+    margin: 15px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--bone-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+
+.news-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.scroll-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+
+.news-card-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--red-primary);
+    text-shadow: 2px 2px 4px var(--yellow-primary);
+}
+
+
+.news-card-text {
+    font-size: 0.95rem;
+    color: var(--yellow-primary);
+    margin-bottom: 10px;
+}
+
+/* bottone news */
+
+.btn-news {
+    background-color: var(--red-primary);
+    color: var(--white-primary);
+    padding: 12px 28px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-news:hover {
+    background-color: var(--yellow-primary);
+    color: var(--blue-pastel);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* footer */
+.footer-container{
+	width: 100vw;
+	background-color: var(--dark);
+	display: flex;
+	justify-content: space-around;
+	padding: 7rem 0 5rem 0;
+}
+
+/*footer left side start*/
+.footer-logo{
+	width: 18vw;
+	margin-left: 7rem;
+}
+.footer-logo p{
+	font-size: 1.4rem;
+	padding: 1.5rem 0rem;
+	line-height: 2.1rem;
+}   
+
+.fa{
+	color: var(--bone-white)
+}
+
+.icons{
+	margin: 0rem 1.5rem;
+}
+
+/*footer sinistra e destra*/
+.footer-links{
+	width: 32vw;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.4rem;
+}
+
+footer h3{
+    font-weight: 500;
+    color: var(--light);
+}
+
+.footer-links ul a li{
+    color: var(--blue-pastel);
+	list-style-type: none;
+	padding: 1rem 0rem;
+}
+.footer-links ul a{
+    color: var(--light);
+	text-decoration: none;
+	color: #6e6b6b;
+}	
+/*footer center ends*/
+
+/*footer right section*/
+.footer-contactus{
+	width: 17vw;
+}
+
+
+.footer-contactus h2{
+    color: var(--yellow-primary);
+	font-size: 1.9rem;
+}
+.footer-contactus button{
+	padding: 1.4rem 2rem;
+    font-size: 1.6rem;
+    background: var(--red-primary);
+    border: none;
+    border-radius: .4rem;
+    color: var(--blue-pastel);
+    margin-top: 1.6rem;
+    cursor: pointer;
+}
+.copywright-tag{
+	background-color: var(--light);
+	padding: 1.5rem;
+	font-size: 1.5rem;
+	text-align: center;
+}

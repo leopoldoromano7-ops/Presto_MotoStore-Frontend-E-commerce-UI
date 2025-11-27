@@ -11,11 +11,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Link michalsnik-->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- link CSS personale -->
      <link rel="stylesheet" href="style.css">
 </head>
 
+
   <body>    
+    <!-- INIZIO NAV BAR -->
     <div class="navbar-background">
             <nav class="navbar navbar-custom navbar-solid navbar-expand-lg fixed-top rounded-3 shadow-sm px-4">
                 <div class="container-fluid">
@@ -76,9 +80,10 @@
             </nav>
     </div>
 
-
+<!-- FINE NAVBAR -->
+ 
+<!-- INIZIO HERO SECTION -->
     <header>
-
                 <section class="videoSection     position-relative">
                     
                     <div class="row">
@@ -92,30 +97,206 @@
                 </section>
         
 
-                    <div class="overlay position-absolute top-50 start-50 translate-middle text-center text-white">
-                        <img src="/media/logo.png" alt="Logo del sito" class="img-fluid mb-3" style="max-width: 200px;">
-                        <p class="lead text-light">RIDE OR SIMPLE WALK...</p>
-                    <div class="container2  d-flex justify-content-center">
-                        <input type="text" name="text" class="input2" placeholder="Search">
+                    <div class="overlay position-absolute top-50 start-50 translate-middle d-flex flex-column justify-content-center align-items-center text-center text-white">
+                        <img src="/media/logo.png" alt="Logo del sito" class="img-fluid mb-3 overlay-logo"  data-aos="fade-down-right">
+                         <p class="lead text-light overlay-lead mb-3"    data-aos="fade-right">
+                                Ride if you want, walk if you don’t.
+                         </p>
+                        <div class="container2 d-flex justify-content-center"   data-aos="fade-left">
+                            <input type="text" name="text" class="input2" placeholder="Search">
                             <button class="search__btn2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
-                                <path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z" fill="#efeff1"></path>
+                                    <path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z" fill="#efeff1"></path>
                                 </svg>
                             </button>
+                        </div>
+
                     </div>
-
-
-
     </header>
 
+<!-- FINE HERIO SECTION -->
+ 
 
+<!-- INIZIO MAIN -->
+<main>
+
+    <!-- aRTICOLO NUOVA USCITA-->
+        <section class="container-fluid  border-top border-3 border-color   px-0">
+            <div class="row">
+                
+                <div class="yellow-shadow  col-12  col-md-7 text-uppercase px-3    mt-3"    data-aos="fade-right">
+                    <h2 class="ms-3 fw-bold fs-1 text-red   ">Lorem, ipsum dolor sit amet</h2>
+                    <p class="ms-3">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, neque totam. 
+                    Ipsam exercitationem cum doloribus maxime voluptatibus,
+                    Magni laborum architecto ipsa aut. Inventore iste, deserunt eius velit rem fugiat odio.
+                    </p>
+                    <button class="btn btn-custom ms-3">Scopri di più</button>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="/media/header1.jpg" alt="Africa Twin" class="img-africaTwin   img-fluid shadow"   data-aos="fade-left">
+                </div>
+            </div>
+        </section>
+
+
+    <!-- counter  -->
+    <section class="container-fluid  border-top border-3 border-color ali">
+        <div class="row incrementNumber mt-1">
+            <div class="col-12 d-flex justify-content-evenly align-items-center mt-3">
+                <p class="lead text-center text-yellow  fw-bold bone-shadow">   
+                PRODOTTI VENDUTI <span id="primoNumero" class="ms-2 lead number text-blue   fw-bold">0</span>
+                </p>
+                <p class="lead text-center text-red fw-bold bone-shadow">
+                CLIENTI SODDISFATTI <span id="secondoNumero" class="ms-2 lead number text-blue  fw-bold">0</span>
+                </p>
+                <p class="lead text-center  text-yellow fw-bold bone-shadow">
+                AZIENDE PARTNER <span id="terzoNumero" class="ms-2 lead number text-blue    fw-bold">0</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+            </section>
+
+    <!-- Sezione  APPENA RILASCIATE-->
+
+        <article class="container-fluid   border-top border-3 border-color py-3">
+            <div class="row">
+                <div class="redShadow   col-12 text-center text-uppercase px-3  my-5">   
+                    <h2 class=" fw-bold fs-1 text-yellow">Nuove arrivate</h1>     
+                </div>
+
+                    <section class="container ">
+                        <div class="row  gx-3 justify-content-center" id="motoCardsContainer">
+                            <!-- Le card di JS -->
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+        </article>
+
+
+    <!-- SEZIONE GENERI -->
+<section class="container-fluid py-5">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold fs-1 text-red text-uppercase yellow-shadow my-5">Scopri di più</h2>
+  </div>
+
+  <div class="row justify-content-center" id="motoCardsContainerCarousel">
+    <!-- le card saranno inserite qui dal JS -->
+  </div>
+</section>
+
+
+
+<!-- SEZIONE NEWSLETTER -->
+    <section class="container-fluid p-0 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-10 newsletter-section">
+            <div class="newsletter-overlay">
+                <h2>Resta aggiornato!</h2>
+                <p>Iscriviti alla nostra newsletter per ricevere tutte le ultime novità.</p>
+
+                <form action="/pagina-news.html" method="get">
+                <input type="email" name="email" placeholder="Inserisci la tua email" class="form-control" required>
+                <button type="submit" class="btn btn-primary fw-bold">Iscriviti</button>
+                </form>
+
+                <small class="d-block mt-2">
+                Riceverai aggiornamenti e novità direttamente nella tua email.
+                </small>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="containerNews my-5">
+        <div class="row justify-content-center g-4" id="newsCardsContainer">
+            <!-- news card con js ---->
+        </div>
+
+         <div class="text-center my-4">
+            <a href="/news.html" class="btn btn-news text-uppercase">Tutte le News</a>
+        </div>
+    </section>
+</main>
+
+<!-- footer provvisorio, copiato ed incollato di pacca da una pagina        open source da modificare! -->
+<footer>
+    		<div class="footer-container">
+                <div class="footer-logo d-flex flex-column align-items-center justify-content-center">
+                <img class="" src="media/logo.png" alt="Logo" height="100">
+                    <p class="text-light">Ride if you want, walk if you don’t.</p>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+                        </div>
+                </div>
+                <div class="footer-links">
+             <div class="d-flex flex-column align-items-end border-end border-3 border-dark p-3">
+                <h3 class="mb-3">Platform</h3>
+                <ul class="list-unstyled text-end mb-3">
+                    <a href="#"><li>How it Works</a></li>
+                    <a href="#"><li>Checkout</a></li>
+                    <a href="#"><li>Fraud</a></li>
+                    <a href="#"><li>Protection</a></li>
+                    <a href="#"><li>Payments</a></li>
+                   <a href="#"><li>Accounts</a></li>
+                </ul>
+            </div>
+                    <div class="learning text-end">
+                        <h3 class="mb-3">Learn</h3>
+                        <ul class="list-unstyled text-end mb-3">
+                            <a href="#"><li>Resources</li></a>
+                            <a href="#"><li>Blog</li></a>
+                            <a href="#"><li>FAQs</li></a>
+                            <a href="#"><li>ThinkShop</li></a>
+                        </ul>
+                    </div>
+                    <div class="About text-end">
+                        <h3 class="mb-3">About</h3>
+                        <ul class="list-unstyled text-end mb-3">
+                            <a href="#"><li>Careers</li></a>
+                            <a href="#"><li>Team</li></a>
+                            <a href="#"><li>Partners</li></a>
+                            <a href="#"><li>Contact Us</li></a>
+                            <a href="#"><li>News & Press</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-contactus text-end">
+                    <h2>Contact US</h2>
+                    <button>Get in touch</button>
+                </div>
+            </div>
+		<div class="copywright-tag">&copyCopyright Presto. All rights reserved</div>
+	
+</footer>
 
 
     <!-- Script JS personale -->
     <script src="/main.js"></script>
+    <!-- Script michalsnik-->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+            AOS.init({
+                duration: 1000, 
+                easing: 'ease-in-out', 
+                once: true, 
+            });
+            </script>
     <!-- script fontAwesome -->
      <script src="https://kit.fontawesome.com/8586fcc01d.js" crossorigin="anonymous"></script>
     <!-- Script Bottstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
