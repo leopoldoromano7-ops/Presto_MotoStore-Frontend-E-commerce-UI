@@ -130,6 +130,63 @@ document.addEventListener("DOMContentLoaded", () => {
     containerCarousel.appendChild(cardCarousel);
   });
 
+  // card in movimento / piu venduti
+  // Lista immagini 
+  
+let immagini = [
+  {src: "media/Shop/homepage/mostWanted1.png", title: "Prodotto 1", price: "€49,99"},
+  {src: "media/Shop/homepage/mostWanted2.png", title: "Prodotto 2", price: "€59,99"},
+  {src: "media/Shop/homepage/mostWanted4.png", title: "Prodotto 3", price: "€39,99"},
+  {src: "media/Shop/homepage/mostWanted5.png", title: "Prodotto 3", price: "€199,99"},
+  {src: "media/Shop/homepage/mostWanted6.png", title: "Prodotto 3", price: "€149,99"},
+  {src: "media/Shop/homepage/mostWanted7.png", title: "Prodotto 3", price: "€399,99"},
+  {src: "media/Shop/homepage/mostWanted8.png", title: "Prodotto 3", price: "€99,99"},
+  {src: "media/Shop/homepage/mostWanted9.png", title: "Prodotto 3", price: "€149,99"},
+];
+
+function coloreRandom() {
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+  return `${r},${g},${b}`;
+}
+
+let inner = document.getElementById("rotary");
+inner.style.setProperty("--quantity", immagini.length);
+
+immagini.forEach((item, i) => {
+  let card = document.createElement("div");
+  card.className = "cardRotary";
+  card.style.setProperty("--index", i);
+  card.style.setProperty("--color-card", coloreRandom());
+
+  // Immagine
+  let imgDiv = document.createElement("div");
+  imgDiv.className = "imgRotary";
+  imgDiv.style.backgroundImage = `url('${item.src}')`;
+
+  // Info: titolo + prezzo + icona
+  let infoDiv = document.createElement("div");
+  infoDiv.className = "cardInfo";
+  infoDiv.innerHTML = `
+    <span class="title">${item.title}</span>
+    <span class="price">${item.price} <i class="fas fa-cart-plus"></i></span>
+  `;
+
+  // Append
+  card.appendChild(imgDiv);
+  card.appendChild(infoDiv);
+  inner.appendChild(card);
+
+  // Click sull'icona solo
+  let icon = infoDiv.querySelector("i");
+  icon.addEventListener("click", (e) => {
+    e.stopPropagation(); 
+    e.preventDefault();
+    alert(`Hai cliccato sull'icona di ${item.title}`);
+  });
+});
+
   // avviares  i carousel
   motosCarousel.forEach(moto => {
     let myCarousel = document.getElementById(moto.id);
@@ -164,6 +221,8 @@ newsCard.forEach(news => {
 
     containerNews.appendChild(col);
 });
+
+
 
 });
 

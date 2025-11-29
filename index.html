@@ -121,7 +121,7 @@
 <main>
 
     <!-- aRTICOLO NUOVA USCITA-->
-        <section class="container-fluid  border-top border-3 border-color   px-0">
+        <section class="container-fluid border-top border-3 border-color">
             <div class="row">
                 
                 <div class="yellow-shadow  col-12  col-md-7 text-uppercase px-3    mt-3"    data-aos="fade-right">
@@ -142,7 +142,7 @@
 
 
     <!-- counter  -->
-    <section class="container-fluid  border-top border-3 border-color ali">
+    <section class="container-fluid  border-top border-3 border-color">
         <div class="row incrementNumber mt-1">
             <div class="col-12 d-flex justify-content-evenly align-items-center mt-3">
                 <p class="lead text-center text-yellow  fw-bold bone-shadow">   
@@ -164,13 +164,13 @@
 
     <!-- Sezione  APPENA RILASCIATE-->
 
-        <article class="container-fluid   border-top border-3 border-color py-3">
+        <article class="container-fluid border-top border-3 border-color py-5">
             <div class="row">
-                <div class="redShadow   col-12 text-center text-uppercase px-3  my-5">   
+                <div class="redShadow   col-12 text-center text-uppercase">   
                     <h2 class=" fw-bold fs-1 text-yellow">Nuove arrivate</h1>     
                 </div>
 
-                    <section class="container ">
+                    <section class="container my-4">
                         <div class="row  gx-3 justify-content-center" id="motoCardsContainer">
                             <!-- Le card di JS -->
                         </div>
@@ -185,18 +185,41 @@
     <!-- SEZIONE GENERI -->
 <section class="container-fluid py-5">
   <div class="text-center mb-4">
-    <h2 class="fw-bold fs-1 text-red text-uppercase yellow-shadow my-5">Scopri di più</h2>
+    <h2 class="fw-bold fs-1 text-red text-uppercase yellow-shadow my-4">Scopri di più</h2>
   </div>
 
-  <div class="row justify-content-center" id="motoCardsContainerCarousel">
+  <div class="row justify-content-center     my-4" id="motoCardsContainerCarousel">
     <!-- le card saranno inserite qui dal JS -->
   </div>
 </section>
 
+<!-- SEZIONE  SHOP -->
 
+<section class="container-fluid py-5">
+   <div class="text-center">
+    <h2 class="fw-bold fs-1 text-yellow text-uppercase  redShadow   mt-4">prodotti piu' VENDUTI</h2>
+  </div>
+
+<!-- Card prodotti piu venduti -->
+<div class="wrapper mb-5">
+  <div class="inner" id="rotary" style="--quantity: 0;"></div>
+</div>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+<div class="text-center mb-5">
+  <a href="pagina-shop.html" class="btn-news">VAI ALLO SHOP</a>
+</div>
 
 <!-- SEZIONE NEWSLETTER -->
-    <section class="container-fluid p-0 mt-5">
+    <section class="container-fluid mt-5    py-5">
+          <div class="text-center">
+             <h2 class="fw-bold fs-1 text-red text-uppercase yellow-shadow">NEWS</h2>
+        </div>
+
         <div class="row justify-content-center">
             <div class="col-10 newsletter-section">
             <div class="newsletter-overlay">
@@ -216,8 +239,8 @@
         </div>
     </section>
 
-    <section class="containerNews my-5">
-        <div class="row justify-content-center g-4" id="newsCardsContainer">
+    <section class="containerNews">
+        <div class="row justify-content-center" id="newsCardsContainer">
             <!-- news card con js ---->
         </div>
 
