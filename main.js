@@ -130,18 +130,28 @@ document.addEventListener("DOMContentLoaded", () => {
     containerCarousel.appendChild(cardCarousel);
   });
 
+    // avviares  i carousel
+  motosCarousel.forEach(moto => {
+    let myCarousel = document.getElementById(moto.id);
+    new bootstrap.Carousel(myCarousel, {
+      interval: 2000, 
+      ride: 'carousel'
+    });
+  });
+
   // card in movimento / piu venduti
   // Lista immagini 
   
 let immagini = [
   {src: "media/Shop/homepage/mostWanted1.png", title: "Prodotto 1", price: "€49,99"},
   {src: "media/Shop/homepage/mostWanted2.png", title: "Prodotto 2", price: "€59,99"},
-  {src: "media/Shop/homepage/mostWanted4.png", title: "Prodotto 3", price: "€39,99"},
-  {src: "media/Shop/homepage/mostWanted5.png", title: "Prodotto 3", price: "€199,99"},
-  {src: "media/Shop/homepage/mostWanted6.png", title: "Prodotto 3", price: "€149,99"},
-  {src: "media/Shop/homepage/mostWanted7.png", title: "Prodotto 3", price: "€399,99"},
-  {src: "media/Shop/homepage/mostWanted8.png", title: "Prodotto 3", price: "€99,99"},
-  {src: "media/Shop/homepage/mostWanted9.png", title: "Prodotto 3", price: "€149,99"},
+  {src: "media/Shop/homepage/mostWanted3.png", title: "Prodotto 3", price: "€39,99"},
+  {src: "media/Shop/homepage/mostWanted4.png", title: "Prodotto 4", price: "€39,99"},
+  {src: "media/Shop/homepage/mostWanted5.png", title: "Prodotto 5", price: "€199,99"},
+  {src: "media/Shop/homepage/mostWanted6.png", title: "Prodotto 6", price: "€149,99"},
+  {src: "media/Shop/homepage/mostWanted7.png", title: "Prodotto 7", price: "€399,99"},
+  {src: "media/Shop/homepage/mostWanted8.png", title: "Prodotto 8", price: "€99,99"},
+  {src: "media/Shop/homepage/mostWanted9.png", title: "Prodotto 9", price: "€149,99"},
 ];
 
 function coloreRandom() {
@@ -187,14 +197,6 @@ immagini.forEach((item, i) => {
   });
 });
 
-  // avviares  i carousel
-  motosCarousel.forEach(moto => {
-    let myCarousel = document.getElementById(moto.id);
-    new bootstrap.Carousel(myCarousel, {
-      interval: 2000, 
-      ride: 'carousel'
-    });
-  });
 
 let newsCard = [
     {titolo: "Nuovo modello Adventure", testo: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit vero incidunt eos, doloribus rerum sunt molestiae tempore laudantium dicta nisi accusamus saepe asperiores omnis dolorum corrupti dolorem quo porro voluptatem placeat animi recusandae aperiam magni sit deleniti. Itaque vitae, enim doloribus sunt tenetur aliquid aspernatur molestias eos aperiam exercitationem porro?" ,img: "/media/news/news.jpg", link: "https://esempio.com/news1"},
