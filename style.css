@@ -297,6 +297,13 @@ z-index: 1000;
     text-shadow: 2px 2px 4px var(--yellow-primary);
 }
 
+.col-md-5 {
+    padding-right: 0;
+}
+
+.img-africaTwin {
+    margin-right: 0;
+}
 
 .btn-custom{
     background: linear-gradient(135deg, var(--red-primary), var(--yellow-primary));
@@ -458,7 +465,7 @@ z-index: 1000;
   background-image: url('/media/newsletter.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: ;
+  background-repeat: no-repeat;
   height: 400px;
   display: flex;
   justify-content: center;
@@ -572,7 +579,7 @@ z-index: 1000;
 
 .btn-news {
     background-color: var(--red-primary);
-    color: var(--white-primary);
+    color: var(--bone-white);
     padding: 12px 28px;
     font-size: 1.2rem;
     font-weight: 700;
@@ -765,3 +772,125 @@ z-index: 1000;
 	font-size: 1.5rem;
 	text-align: center;
 }
+
+
+/* pagina dello shop */
+
+/* titolo header */
+.slider-bg {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 20px;
+    color: var(--yellow-primary);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 120px - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slider-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('media/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: slideBg 12s infinite;
+}
+
+@keyframes slideBg {
+    0%  { background-image: url('media/Shop/shop/SectionShop1.png'); }
+    50%  { background-image: url('media/Shop/shop/SectionShop2.png'); }
+    100% { background-image: url('media/Shop/shop/SectionShop3.png'); }
+}
+
+.slider-bg h2 {
+    position: relative; /* per stare sopra lo sfondo */
+    z-index: 1;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(to right, var(--red-primary), var(--yellow-primary));
+} 
+
+.accordion-button{
+    background: linear-gradient(to right, var(--yellow-primary), var(--red-primary));
+}
+
+/* card shop */
+
+.cardsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; 
+    height: 100%;
+    max-width: 300px; 
+    margin: 15px auto;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    height: 350px; 
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardsWrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.cardsWrapper img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover; 
+}
+
+.cardsWrapper .card-body {
+    padding: 15px;
+}
+
+.cardsWrapper .card-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--red-primary);
+    text-shadow: 2px 2px 4px var(--yellow-primary);
+}
+
+.cardsWrapper .card-subtitle {
+    font-size: 0.95rem;
+    color: var(--yellow-primary);
+    text-shadow: 2px 2px 4px var(--red-primary);
+    margin-bottom: 10px;
+}
+
+.cardsWrapper .btn {
+    background: linear-gradient(135deg, var(--red-primary), var(--yellow-primary));
+    color: var(--light);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.cardsWrapper .btn:hover {
+    background: linear-gradient(135deg, var(--yellow-primary), var(--red-primary));
+    color: var(--blue-pastel);
+}
+

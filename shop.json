@@ -1,0 +1,183 @@
+[
+    {
+        "id": 1,
+        "name": "AeroMax V1",
+        "category": "Caschi",
+        "price": "129€",
+        "image": "/media/Shop/shop/caschi/casco1.png"
+    },
+    {
+        "id": 2,
+        "name": "StormRide X2",
+        "category": "Caschi",
+        "price": "149€",
+        "image": "/media/Shop/shop/caschi/casco2.png"
+    },
+    {
+        "id": 3,
+        "name": "ShadowHorn GT",
+        "category": "Caschi",
+        "price": "159€",
+        "image": "/media/Shop/shop/caschi/casco3.png"
+    },
+    {
+        "id": 4,
+        "name": "IronViper 4X",
+        "category": "Caschi",
+        "price": "139€",
+        "image": "/media/Shop/shop/caschi/casco4.png"
+    },
+    {
+        "id": 5,
+        "name": "Falcon Pro S",
+        "category": "Caschi",
+        "price": "169€",
+        "image": "/media/Shop/shop/caschi/casco5.png"
+    },
+
+    {
+        "id": 6,
+        "name": "RoadRush SoftShell",
+        "category": "Giacche",
+        "price": "119€",
+        "image": "/media/Shop/shop/giacche/giacca1.png"
+    },
+    {
+        "id": 7,
+        "name": "Urban Shield Pro",
+        "category": "Giacche",
+        "price": "139€",
+        "image": "/media/Shop/shop/giacche/giacca2.png"
+    },
+    {
+        "id": 8,
+        "name": "VentoFlex Touring",
+        "category": "Giacche",
+        "price": "159€",
+        "image": "/media/Shop/shop/giacche/giacca3.png"
+    },
+    {
+        "id": 9,
+        "name": "NightRider Evo",
+        "category": "Giacche",
+        "price": "129€",
+        "image": "/media/Shop/shop/giacche/giacca4.png"
+    },
+    {
+        "id": 10,
+        "name": "SteelSkin Armor",
+        "category": "Giacche",
+        "price": "169€",
+        "image": "/media/Shop/shop/giacche/giacca5.png"
+    },
+
+    {
+        "id": 11,
+        "name": "GripMaster One",
+        "category": "Guanti",
+        "price": "39€",
+        "image": "/media/Shop/shop/guanti/guanti1.png"
+    },
+    {
+        "id": 12,
+        "name": "ThermoRide 500",
+        "category": "Guanti",
+        "price": "49€",
+        "image": "/media/Shop/shop/guanti/guanti2.png"
+    },
+    {
+        "id": 13,
+        "name": "CarbonFlex Touch",
+        "category": "Guanti",
+        "price": "45€",
+        "image": "/media/Shop/shop/guanti/guanti3.png"
+    },
+    {
+        "id": 14,
+        "name": "Raptor Grip V2",
+        "category": "Guanti",
+        "price": "59€",
+        "image": "/media/Shop/shop/guanti/guanti4.png"
+    },
+    {
+        "id": 15,
+        "name": "SoftRide Comfort",
+        "category": "Guanti",
+        "price": "35€",
+        "image": "/media/Shop/shop/guanti/guanti5.png"
+    },
+
+
+    {
+        "id": 16,
+        "name": "TrailForce Denim",
+        "category": "Pantaloni",
+        "price": "89€",
+        "image": "/media/Shop/shop/pantaloni/pantalone1.png"
+    },
+    {
+        "id": 17,
+        "name": "MotoGuard Tek",
+        "category": "Pantaloni",
+        "price": "99€",
+        "image": "/media/Shop/shop/pantaloni/pantalone2.png"
+    },
+    {
+        "id": 18,
+        "name": "SteelLeg Adventure",
+        "category": "Pantaloni",
+        "price": "119€",
+        "image": "/media/Shop/shop/pantaloni/pantalone3.png"
+    },
+    {
+        "id": 19,
+        "name": "UrbanFlex Rider",
+        "category": "Pantaloni",
+        "price": "79€",
+        "image": "/media/Shop/shop/pantaloni/pantalone4.png"
+    },
+    {
+        "id": 20,
+        "name": "ProShield Touring",
+        "category": "Pantaloni",
+        "price": "109€",
+        "image": "/media/Shop/shop/pantaloni/pantalone5.png"
+    },
+
+    {
+        "id": 21,
+        "name": "StormBoot ADV",
+        "category": "Stivali",
+        "price": "129€",
+        "image": "/media/Shop/shop/stivali/stivali1.png"
+    },
+    {
+        "id": 22,
+        "name": "SteelWalker X",
+        "category": "Stivali",
+        "price": "149€",
+        "image": "/media/Shop/shop/stivali/stivali2.png"
+    },
+    {
+        "id": 23,
+        "name": "RoadGrip Enduro",
+        "category": "Stivali",
+        "price": "139€",
+        "image": "/media/Shop/shop/stivali/stivali3.png"
+    },
+    {
+        "id": 24,
+        "name": "AdventureFoot Pro",
+        "category": "Stivali",
+        "price": "159€",
+        "image": "/media/Shop/shop/stivali/stivali4.png"
+    },
+
+    {
+        "id": 25,
+        "name": "NightWalker GT",
+        "category": "Stivali",
+        "price": "169€",
+        "image": "/media/Shop/shop/stivali/stivali5.png"
+    }
+]
