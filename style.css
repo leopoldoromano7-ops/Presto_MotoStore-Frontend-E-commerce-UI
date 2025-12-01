@@ -814,11 +814,10 @@ z-index: 1000;
 }
 
 .slider-bg h2 {
-    position: relative; /* per stare sopra lo sfondo */
+    position: relative;
     z-index: 1;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 8px var(--red-primary);
 }
-
 
 .accordion-button:not(.collapsed) {
     background: linear-gradient(to right, var(--red-primary), var(--yellow-primary));
