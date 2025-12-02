@@ -16,6 +16,72 @@ updateNavbar();
 window.addEventListener('scroll', updateNavbar);
 
 
+//navbar dropdown moto
+let motoDataDef = {
+    Naked: [
+        { nome: "Naked 500", img: "media/naked1.jpg", link: "#" },
+        { nome: "Naked 750", img: "media/naked2.jpg", link: "#" },
+        { nome: "Naked 900", img: "media/naked3.jpg", link: "#" },
+        { nome: "Naked 1200", img: "media/naked4.jpg", link: "#" }
+    ],
+
+    Adventure: [
+        { nome: "Adventure 700", img: "media/adventure1.jpg", link: "#" },
+        { nome: "Adventure 800", img: "media/adventure2.jpg", link: "#" },
+        { nome: "Adventure 1000", img: "media/adventure3.jpg", link: "#" },
+        { nome: "Adventure 1200", img: "media/adventure4.jpg", link: "#" }
+    ],
+
+    Sport: [
+        { nome: "Sport 600", img: "media/sport1.jpg", link: "#" },
+        { nome: "Sport 750", img: "media/sport2.jpg", link: "#" },
+        { nome: "Sport 900", img: "media/sport3.jpg", link: "#" },
+        { nome: "Sport 1000", img: "media/sport4.jpg", link: "#" }
+    ],
+
+    Touring: [
+        { nome: "Touring 800", img: "media/touring1.jpg", link: "#" },
+        { nome: "Touring 1000", img: "media/touring2.jpg", link: "#" },
+        { nome: "Touring 1200", img: "media/touring3.jpg", link: "#" },
+        { nome: "Touring 1600", img: "media/touring4.jpg", link: "#" }
+    ]
+};
+
+
+//funzione card moto dropdown
+function generaMegaMenu(data) {
+    let megaMenuContainer  = document.getElementById("megaMenuContainer");
+
+    Object.keys(data).forEach(categoria => {
+        let categoriaHTML = `
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h4 class="text-uppercase fw-bold mb-3">${categoria}</h4>
+                </div>
+        `;
+
+        data[categoria].forEach(moto => {
+            categoriaHTML += `
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <div class="card  card-moto">
+                        <img src="${moto.img}" class="card-img-top" alt="${moto.nome}">
+                        <div class="card-body">
+                            <h6 class="card-title">${moto.nome}</h6>
+                            <a href="${moto.link}" class="stretched-link">Scopri</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        categoriaHTML += `</div>`; // chiude la row
+
+        megaMenuContainer.insertAdjacentHTML("beforeend", categoriaHTML);
+    });
+}
+
+// Avvia la generazione
+generaMegaMenu( motoDataDef);
 
 
 // CARD MOTO

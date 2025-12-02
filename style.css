@@ -217,7 +217,62 @@ z-index: 1000;
     background: linear-gradient(to right, var(--yellow-primary), var(--red-primary));
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
+/* dropdown */
 
+.dropdown-menu.dropdown-fullwidth {
+    width:  88vw;
+    left: 50%;
+    transform: translateX(-34%);
+    top: 175%; 
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    background-color: var(--bone-white);
+    backdrop-filter: none;
+    max-height: 60vh; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+}
+
+.dropdown-menu.dropdown-fullwidth .dropdown-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar-transparent .dropdown-menu.dropdown-fullwidth {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);       
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu.dropdown-fullwidth::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-menu.dropdown-fullwidth::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+}
+
+.dropdown-menu.dropdown-fullwidth::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.navbar-transparent .dropdown-menu .card {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+     color: rgba(255, 255, 255, 0.85) 
+}
+
+.navbar-transparent .dropdown-menu .card h6,
+.navbar-transparent .dropdown-menu .card p,
+.navbar-transparent .dropdown-menu .card a {
+    color: var(--bone-white);
+}
+
+.navbar-transparent .dropdown-menu .card:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
 
 /* HEADER */
 /* search Opern Source header*/

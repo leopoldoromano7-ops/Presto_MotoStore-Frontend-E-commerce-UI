@@ -26,30 +26,24 @@ let wordInput = document.querySelector("#wordInput");
 fetch("./shop.json").then( (response)=> response.json()).then( (data)=>  {
     console.log(data);  
 
-                  data.forEach(item => {
-                        item.price = +item.price.replace('€','');
-                    });
-
-
-
         function setCategoryFilter() {
             let categories = data.map(  (shop)=> shop.category  )
             let uniqueCategory = [];
-            categories.forEach( ( categoria  )=> {
-                if( !uniqueCategory.includes(categoria ) ){
-                    uniqueCategory.push(categoria);
+            categories.forEach( (  category  )=> {
+                if( !uniqueCategory.includes( category ) ){
+                    uniqueCategory.push( category);
                 }
             })  
 
-            uniqueCategory.forEach( (categoria)=>{
+            uniqueCategory.forEach( ( category)=>{
 
                 let div =  document.createElement("div");
                 div.classList.add( "form-check" );
                 div.innerHTML = `
                 
-                    <input class="form-check-input" type="radio" name="category" id="${categoria}">
-                    <label class="form-check-label" for=" ${categoria} ">
-                                 ${categoria}
+                    <input class="form-check-input" type="radio" name="category" id="${ category}">
+                    <label class="form-check-label" for=" ${ category} ">
+                                 ${ category}
                     </label>
                 `
                 categoryWrapper.appendChild(div)
@@ -96,11 +90,11 @@ fetch("./shop.json").then( (response)=> response.json()).then( (data)=>  {
         function filterByCategory() {
             let checked = Array.from(radios).find( (button)=> button.checked );
     
-            let categoria = checked.id;
+            let  category = checked.id;
 
-            if( categoria != "all" ){
+            if(  category != "all" ){
 
-                let filtered = data.filter(  (shop)=> shop.category == categoria   )
+                let filtered = data.filter(  (shop)=> shop.category == category   )
                 showCards(filtered);
 
             }else{
